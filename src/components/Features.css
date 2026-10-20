@@ -1,0 +1,7 @@
+.features { padding: 4.5rem 0; background: #f6f9fe; }
+.features h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--blue-900); }
+.features-intro { color: var(--muted); margin: 0.5rem 0 2.5rem; max-width: 60ch; }
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+@media (max-width: 1000px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .features-grid { grid-template-columns: 1fr; } .features { padding: 3rem 0; } }

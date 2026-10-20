@@ -1,0 +1,13 @@
+.symptom-input { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.suggestions { border: 1px solid var(--line); border-radius: 8px; background: var(--white); overflow: hidden; }
+.suggestions button { width: 100%; text-align: left; font: inherit; padding: 0.6rem 0.9rem; border: 0; background: transparent; cursor: pointer; }
+.suggestions li + li button { border-top: 1px solid var(--line); }
+.suggestions button:hover { background: var(--blue-100); color: var(--blue-700); }
+
+.hint { font-size: 0.9rem; color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+.chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.4rem 0.3rem 0.85rem; border-radius: 999px; background: var(--blue-100); color: var(--blue-700); font-weight: 600; font-size: 0.95rem; }
+.chip button { width: 24px; height: 24px; border: 0; border-radius: 50%; background: var(--white); color: var(--blue-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.chip button:hover { background: var(--orange-500); color: var(--white); }

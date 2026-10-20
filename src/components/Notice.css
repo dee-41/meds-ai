@@ -1,0 +1,3 @@
+.notice { position: sticky; top: 64px; z-index: 9; background: #fff1e3; border-bottom: 2px solid var(--orange-500); color: #6b3500; }
+.notice-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; }
+.notice button { font: inherit; font-weight: 600; border: 1px solid var(--orange-600); background: var(--white); color: var(--orange-600); border-radius: 6px; padding: 0.3rem 0.9rem; cursor: pointer; white-space: nowrap; }

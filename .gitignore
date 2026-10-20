@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+server/node_modules
+
+# Build output
+dist
+
+# Environment files (keep only the example)
+.env
+.env.*
+!.env.example
+
+# Logs and system files
+*.log
+.DS_Store

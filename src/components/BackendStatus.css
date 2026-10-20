@@ -1,0 +1,7 @@
+.backend-status { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; }
+.status-dot { width: 10px; height: 10px; border-radius: 50%; background: #9db3d6; flex-shrink: 0; }
+.backend-status.connected .status-dot { background: #3ecf8e; }
+.backend-status.disconnected .status-dot { background: var(--orange-500); }
+.backend-status.disconnected { color: #ffd2a8; }
+.backend-status button { font: inherit; font-size: 0.8rem; font-weight: 600; padding: 0.1rem 0.6rem; border-radius: 6px; border: 1px solid var(--orange-500); background: transparent; color: #ffd2a8; cursor: pointer; }
+.backend-status button:hover { background: rgba(245, 130, 32, 0.2); }
