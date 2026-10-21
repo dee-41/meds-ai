@@ -28,3 +28,13 @@ CREATE TABLE IF NOT EXISTS symptom_assessments (
 );
 
 CREATE INDEX IF NOT EXISTS symptom_assessments_user_idx ON symptom_assessments (user_id);
+
+-- Login sessions (used by express-session / connect-pg-simple).
+-- Holds only a random session id and who it belongs to, never passwords.
+CREATE TABLE IF NOT EXISTS user_sessions (
+  sid    VARCHAR NOT NULL PRIMARY KEY,
+  sess   JSON NOT NULL,
+  expire TIMESTAMP(6) NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS user_sessions_expire_idx ON user_sessions (expire);

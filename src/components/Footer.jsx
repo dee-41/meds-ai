@@ -25,7 +25,22 @@ export default function Footer({ onUnavailable }) {
             <li><a href="#" onClick={(e) => pending(e, 'About Us')}>About Us</a></li>
           </ul>
         </nav>
+
+        <div>
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:contact@meds-ai.example">contact@meds-ai.example</a></p>
+          <p className="footer-small">Placeholder address. Real contact details will be added before launch.</p>
         </div>
-      </footer>
+      </div>
+
+      <div className="container footer-bottom">
+        <p>
+          MEDS-AI does not provide medical advice or diagnosis. In an emergency,
+          contact your local emergency services.
+        </p>
+        <BackendStatus />
+        <p>&copy; {new Date().getFullYear()} MEDS-AI</p>
+      </div>
+    </footer>
   )
 }

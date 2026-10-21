@@ -1,4 +1,4 @@
-.navbar { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--line); }
+.navbar { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--line); }
 .navbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
 
 .brand { display: flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.35rem; color: var(--blue-700); letter-spacing: 0.02em; }
@@ -9,6 +9,9 @@
 .nav-links a { font-weight: 500; padding: 0.4rem 0; border-bottom: 2px solid transparent; }
 .nav-links a:hover { color: var(--blue-600); border-bottom-color: var(--orange-500); }
 
+.nav-logout { font: inherit; font-weight: 500; padding: 0.4rem 0; border: 0; border-bottom: 2px solid transparent; background: none; color: inherit; cursor: pointer; }
+.nav-logout:hover { color: var(--blue-600); border-bottom-color: var(--orange-500); }
+
 .menu-toggle { display: none; font: inherit; font-weight: 600; padding: 0.45rem 1rem; border: 1px solid var(--blue-700); border-radius: 8px; background: var(--white); color: var(--blue-700); cursor: pointer; }
 
 @media (max-width: 860px) {
@@ -16,5 +19,5 @@
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--line); padding: 0.5rem 1.25rem 1rem; }
   .nav-links.open { display: block; }
   .nav-links ul { flex-direction: column; gap: 0; }
-  .nav-links a { display: block; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+  .nav-links a, .nav-logout { display: block; width: 100%; text-align: left; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
 }

@@ -5,11 +5,14 @@ import Features from './components/Features.jsx'
 import Footer from './components/Footer.jsx'
 import Notice from './components/Notice.jsx'
 import PredictPage from './pages/PredictPage.jsx'
+import AuthPage from './pages/AuthPage.jsx'
 
 // Simple routing without a library: the URL hash decides which page shows.
-// "#/predict" shows the Predict Disease page, anything else shows the homepage.
+// Each page has its own hash; anything else shows the homepage.
+const PAGE_HASHES = { '#/predict': 'predict', '#/login': 'login', '#/register': 'register' }
+
 function getRoute() {
-  return window.location.hash === '#/predict' ? 'predict' : 'home'
+  return PAGE_HASHES[window.location.hash] ?? 'home'
 }
 
 export default function App() {
@@ -20,7 +23,7 @@ export default function App() {
   useEffect(() => {
     function onHashChange() {
       const hash = window.location.hash
-      if (hash === '#/predict') setRoute('predict')
+      if (PAGE_HASHES[hash]) setRoute(PAGE_HASHES[hash])
       else if (hash === '' || hash === '#top' || hash === '#features') setRoute('home')
       // other hashes (like #contact) are in the footer, which is on every page
     }
@@ -31,7 +34,7 @@ export default function App() {
   // After switching page, jump to the top or to the section that was requested.
   useEffect(() => {
     const hash = window.location.hash
-    if (hash === '#/predict' || hash === '') {
+    if (PAGE_HASHES[hash] || hash === '') {
       window.scrollTo(0, 0)
     } else {
       document.getElementById(hash.slice(1))?.scrollIntoView()
@@ -47,6 +50,8 @@ export default function App() {
       <main>
         {route === 'predict' ? (
           <PredictPage />
+        ) : route === 'login' || route === 'register' ? (
+          <AuthPage key={route} mode={route} />
         ) : (
           <>
             <Hero />

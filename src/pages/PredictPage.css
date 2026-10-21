@@ -26,3 +26,8 @@
   .field-row { grid-template-columns: 1fr; }
   .form-actions .btn { flex: 1; }
 }
+
+.safety-note { max-width: 62ch; margin-bottom: 1.5rem; padding: 0.7rem 0.9rem; border-radius: 8px; background: #fff1e3; border: 1px solid var(--orange-500); color: #6b3500; }
+.emergency-banner { margin-bottom: 1.5rem; padding: 1rem 1.2rem; border-radius: 10px; background: var(--orange-600); color: var(--white); font-weight: 600; }
+.privacy-note { font-size: 0.85rem; color: var(--muted); }
+.predict-card .btn:disabled { opacity: 0.7; cursor: wait; }
